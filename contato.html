@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu Sonho de Infância - Entre em Contato</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/jpg" href="img/icone.png">
+
+
+        <script type="text/javascript">
+            function processaform() {
+                var nome = document.form1.nome.value;
+                var nota = document.form1.nota.value;
+
+                if (nome.trim() == "") {
+                    alert("Por favor, preencha o campo Nome.");
+                    document.form1.nome.focus();
+                    return false;
+                }
+
+                if (nota == "") {
+                    alert("Por favor, selecione uma Nota.");
+                    document.form1.nota.focus();
+                    return false;
+                }
+
+                // O alert DEVE vir ANTES do return true
+                alert("Obrigado pelo feedback, " + nome + "! Formulário enviado com sucesso.");
+                return true;
+        }
+        </script>
+    </head>
+    <body id="topo">
+
+        <header>
+            <h1>Meu Sonho de Cantora</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Sonho</a></li>
+                    <li><a href="hoje.html">Hoje</a></li>
+                    <li><a href="futuro.html">Futuro</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Deixe sua Mensagem</h2>
+        
+            <form name="form1" onsubmit="return processaform()" method="post">
+            
+                <div class="form-group">
+                    Seu Nome: <input type="text" size="30" name="nome"><br>
+                </div>
+
+                <div class="form-group">
+                    Sua nota: <select id="nota" name="nota">
+                       <option value="">-- Selecione uma nota --</option>
+                        <option value="5">⭐⭐⭐⭐⭐ - Excelente</option>
+                        <option value="4">⭐⭐⭐⭐ - Muito Bom</option>
+                        <option value="3">⭐⭐⭐ - Bom</option>
+                        <option value="2">⭐⭐ - Regular</option>
+                        <option value="1">⭐ - Ruim</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sugestoes">Sua Opinião:</label><br>
+                    <textarea id="sugestoes" name="sugestoes" rows="5" placeholder="O que achou? Deixe suas sugestões!"></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+
+        <footer>
+            <hr>
+            <a href="#topo" class="voltar-topo">▲</a>
+            <p>Ayumi Kuroishi Yuri 2026 - &copy; Todos os direitos reservados.<br>Trabalho acadêmico sem fins lucrativos.</p>
+        </footer>
+
+    </body>
+</html>
