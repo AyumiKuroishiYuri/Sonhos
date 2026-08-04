@@ -13,13 +13,13 @@
                 var nome = document.form1.nome.value;
                 var nota = document.form1.nota.value;
 
-                if (nome.trim() == "") {
+                if (nome=="") {
                     alert("Por favor, preencha o campo Nome.");
                     document.form1.nome.focus();
                     return false;
                 }
 
-                if (nota == "") {
+                if (nota=="") {
                     alert("Por favor, selecione uma Nota.");
                     document.form1.nota.focus();
                     return false;
@@ -34,7 +34,7 @@
     <body id="topo">
 
         <header>
-            <h1>Meu Sonho de Infância</h1>
+            <h1>Meu Sonho de Cantora</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Sonho</a></li>
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="form-group">
-                    Sua nota: <select id="nota" name="nota">
+                    Sua nota: <select name="nota">
                        <option value="">-- Selecione uma nota --</option>
                         <option value="5">⭐⭐⭐⭐⭐ - Excelente</option>
                         <option value="4">⭐⭐⭐⭐ - Muito Bom</option>
